@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+#### 启动项目
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+npm install
+npm start
+```
 
-## Available Scripts
+#### 打包构建
 
-In the project directory, you can run:
+```
+npm run build
+```
 
-### `npm start`
+#### 工程目录
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+src/                # 源代码目录
+  ├── assets/       # 静态资源文件夹
+  ├── common/       # 全局管理
+  ├── components/   # React 组件
+  ├── hooks/        # 自定义 React hooks
+  ├── pages/       
+  │   └── AboutPage/ # 页面
+  │       └── components/ # 页面的组件
+  │       └── index.tsx   # 页面的入口
+  ├── services/     # 服务层，用于封装 API 调用
+  ├── types/        # TypeScript 类型定义
+  ├── utils/        # 工具函数
+  │   ├── index.tpl     # 模板文件
+  │   ├── index.tsx     # 工具函数入口文件
+  │   ├── lazy-pages.tsx # 懒加载页面组件
+  │   ├── root.tsx      # 根组件
+  │   └── router.tsx    # 路由配置
+webpack/ 
+  ├── config/       # Webpack 配置文件夹
+  │   ├── webpack.base.config.js # Webpack 基础配置
+  │   ├── webpack.dev.config.js  # Webpack 开发环境配置
+  │   └── webpack.prod.config.js # Webpack 生产环境配置
+  └── utils/
+      └── rootPath.js # Webpack 根路径工具函数
+.babelrc            # Babel 配置文件
+.env                # 环境变量配置文件
+.eslintrc.js        # ESLint 配置文件
+.gitignore          # Git 忽略文件配置
+package-lock.json   # npm 锁定依赖版本文件
+package.json        # npm 项目配置文件
+README.md           # 项目说明文件
+tsconfig.json       # TypeScript 配置文件
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
